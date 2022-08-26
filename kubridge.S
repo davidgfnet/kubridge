@@ -1,23 +1,23 @@
     .set noreorder
 
-    #include "pspstub.s"
+    #include "pspimport.s"
 
-  STUB_START "KUBridge",0x00010000,0x00090005
-      STUB_FUNC 0xC452AE27, kuKernelLoadModule
-      STUB_FUNC 0xE1F94089, kuKernelLoadModuleWithApitype2
-      STUB_FUNC 0xE8A50475, kuKernelInitApitype
-      STUB_FUNC 0x712444F5, kuKernelInitFileName
-      STUB_FUNC 0x06DD4BEA, kuKernelBootFrom
-      STUB_FUNC 0x0B8B28E4, kuKernelInitKeyConfig
-      STUB_FUNC 0x2ABA6B3D, kuKernelGetUserLevel
-      STUB_FUNC 0x4CFA21BA, kuKernelSetDdrMemoryProtection
-      STUB_FUNC 0x42338105, kuKernelGetModel
-      STUB_FUNC 0x4B321167, kuKernelFindModuleByName
-      STUB_FUNC 0x219DE4D2, kuKernelIcacheInvalidateAll
-      STUB_FUNC 0x7A50075E, kuKernelPeekw
-      STUB_FUNC 0x0E73A39D, kuKernelPokew
-      STUB_FUNC 0x6B4B577F, kuKernelMemcpy
-      STUB_FUNC 0x9060F69D, kuKernelCall
-      STUB_FUNC 0x5C6C3DBA, kuKernelCallExtendStack
-      STUB_FUNC 0xD0D05A5B, kuKernelGetUmdFile
-  STUB_END
+  IMPORT_START "KUBridge", 0x40090000
+  IMPORT_FUNC "KUBridge", 0x4C25EA72, kuKernelLoadModule
+  IMPORT_FUNC "KUBridge", 0x1E9F0498, kuKernelLoadModuleWithApitype2
+  IMPORT_FUNC "KUBridge", 0x8E5A4057, kuKernelInitApitype
+  IMPORT_FUNC "KUBridge", 0x1742445F, kuKernelInitFileName
+  IMPORT_FUNC "KUBridge", 0x60DDB4AE, kuKernelBootFrom
+  IMPORT_FUNC "KUBridge", 0xB0B8824E, kuKernelInitKeyConfig
+  IMPORT_FUNC "KUBridge", 0xA2ABB6D3, kuKernelGetUserLevel
+  IMPORT_FUNC "KUBridge", 0xC4AF12AB, kuKernelSetDdrMemoryProtection
+  IMPORT_FUNC "KUBridge", 0x24331850, kuKernelGetModel
+  IMPORT_FUNC "KUBridge", 0xB4231176, kuKernelFindModuleByName
+  IMPORT_FUNC "KUBridge", 0x12D94E2D, kuKernelIcacheInvalidateAll
+  IMPORT_FUNC "KUBridge", 0xA70570E5, kuKernelPeekw
+  IMPORT_FUNC "KUBridge", 0xE0373AD9, kuKernelPokew
+  IMPORT_FUNC "KUBridge", 0xB6B475F7, kuKernelMemcpy
+  IMPORT_FUNC "KUBridge", 0x09066FD9, kuKernelCall
+  IMPORT_FUNC "KUBridge", 0xC5C6D3AB, kuKernelCallExtendStack
+  IMPORT_FUNC "KUBridge", 0x0D0DA5B5, kuKernelGetUmdFile
+
